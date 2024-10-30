@@ -19,6 +19,7 @@ Asegúrate de seguir las instrucciones a continuación para configurar y ejecuta
        environment:
          DB_PASSWORD: # Completá con la contraseña de la bdd
          API_KEY: #Completá con la api key que recibiste por mail
+     seo_bdd:
        environment:
          MYSQL_ROOT_PASSWORD: # Completá con la contraseña de root
          MYSQL_PASSWORD: # Completá con la contraseña
