@@ -6,7 +6,7 @@ Asegúrate de seguir las instrucciones a continuación para configurar y ejecuta
 
 ## Requisitos Previos
 
-- Clonar el repositorio en /challenge/ (o cualquier otro nombre que decidas para el directorio de la aplicacion)
+- Clonar el repositorio
 - Docker (instalado, abierto y corriendo)
 
 ## Configuración
