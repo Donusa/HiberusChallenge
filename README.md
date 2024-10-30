@@ -24,6 +24,10 @@ Asegúrate de seguir las instrucciones a continuación para configurar y ejecuta
          MYSQL_ROOT_PASSWORD: # Completá con la contraseña de root
          MYSQL_PASSWORD: # Completá con la contraseña
 
+2. **Compilar proyecto maven**
+   Ya que la carpeta target no deberia de ser publicada se debera ejecutar el comando `mvn clean package -DskipTests`.
+   Una vez sea completado este paso y la carpeta target creada exitosamente se podra proceder con la ejecucion.
+   
 ## Ejecucion
 
 1. Abre la consola de comandos en el directorio que se encuentro el archivo `docker-compose.yml`
