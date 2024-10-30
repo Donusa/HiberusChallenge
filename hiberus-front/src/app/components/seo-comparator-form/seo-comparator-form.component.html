@@ -1,0 +1,49 @@
+<div class="navbar">
+    <h1 class="seo-title">SEO COMPARATOR
+    </h1>
+</div>
+<div class="form-container">
+    <form [formGroup]="seoForm" (ngSubmit)="onSubmit()">
+        <div class="input-checkbox-container">
+            <input type="text" formControlName="site" placeholder="https://www.example.com" 
+            pattern="(url:|origin:)?https?://.*" required>
+            <button class="url-button" type="submit" [disabled]="!seoForm.valid">Compare</button>
+        </div>
+        <label for="checkbox" class="checkbox-label">
+            <input type="checkbox" 
+            [checked]="seoForm.get('strategy')?.value === 'mobile'" 
+            (click)="onStrategyChange($event)"/>
+            Mobile
+        </label>
+    </form>
+    <br/>
+</div>
+
+
+
+<div *ngIf="isModalOpen" class="modal">
+    <div class="modal-content">
+        <span *ngIf="!isLoading" class="close" (click)="closeModal()">&times;</span>
+        <h2 *ngIf="!isLoading && !errorMessage">Metrics</h2>
+        
+        <div *ngIf="isLoading" class="loading">
+            <p>Loading...</p>
+            <p>Esto podria demorar unos minutos, por favor aguarde</p>
+            <mat-spinner *ngIf="isLoading"></mat-spinner>
+        </div>
+
+        <div *ngIf="!isLoading">
+            <div *ngIf="errorMessage" class="error-message">
+                <h2 style="color: magenta;">Error</h2>
+                <p style="color: rgb(15, 15, 15);" [innerHTML]="errorMessage"></p>
+            </div>
+            <div *ngIf="!errorMessage">    
+                <p><strong>Speed Index:</strong> {{ currentMetric?.speedIndex }} ms</p>
+                <p><strong>Time to Interactive:</strong> {{ currentMetric?.timeToInteractive }} ms</p>
+                <p><strong>URL:</strong> {{ currentMetric?.url }}</p>
+                <p><strong>Strategy:</strong> {{ currentMetric?.strategy }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+

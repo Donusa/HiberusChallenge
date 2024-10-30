@@ -1,0 +1,118 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.oxanium-mainFont {
+    font-family: "Oxanium", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+:root {
+    --color-fondo: #121826;
+    --color-acento: #1bcfcf;
+    --color-texto: #d1d5db;
+    --color-texto-secundario: #9ca3af;
+
+    --color-acento-hover: #2563eb;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: Arial, sans-serif;
+}
+
+a,
+button {
+    color: var(--color-acento);
+}
+
+a:hover,
+button:hover {
+    color: var(--color-acento-hover);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-acento);
+}
+
+.bg-dark {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+.bg-accent {
+    background-color: var(--color-acento);
+    color: #ffffff;
+}
+
+button {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 0.9em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #36518d;
+    color: #46cf52;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #1e40af;
+    transform: translateY(0);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    background-color: #1f2937;
+    border: 1px solid #3b82f6;
+    border-radius: 4px;
+    color: #d1d5db;
+    padding: 10px;
+    font-size: 0.9em;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border-color: #2563eb;
+    outline: none;
+}
+
+input[type="checkbox"] {
+    accent-color: #3b82f6;
+}
+
+label {
+    color: #d1d5db;
+    font-size: 0.9em;
+}
